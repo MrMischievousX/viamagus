@@ -4,6 +4,7 @@ import BottomSheet, { BottomSheetBackdrop } from "@gorhom/bottom-sheet";
 import { COLORS } from "../constants/colors";
 import CustomWheelPicker from "./CustomWheelPicker";
 import { CoinIcon } from "../svgs";
+import { ROUTES } from "../constants/routes";
 
 const BottomSheetView = ({ bottomSheetRef, navigation }) => {
   // variables
@@ -48,7 +49,7 @@ const BottomSheetView = ({ bottomSheetRef, navigation }) => {
         <TouchableOpacity
           style={styles.btn}
           activeOpacity={0.5}
-          onPress={() => navigation?.navigate("profile")}
+          onPress={() => navigation?.navigate(ROUTES.profile)}
         >
           <Text style={styles.btnText}>Submit my prediction</Text>
         </TouchableOpacity>

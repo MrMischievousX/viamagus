@@ -6,9 +6,13 @@ import { COLORS } from "./src/constants/colors";
 import * as SplashScreen from "expo-splash-screen";
 import { useFonts } from "expo-font";
 import Update from "./src/screens/Update";
-import { createStackNavigator } from "@react-navigation/stack";
+import {
+  TransitionPresets,
+  createStackNavigator,
+} from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { BottomTabNavigation } from "./src/navigation/BottomTabNavigation";
+import { ROUTES } from "./src/constants/routes";
 
 LogBox.ignoreAllLogs();
 
@@ -41,10 +45,15 @@ const App = ({ params }) => {
       onLayout={handleOnLayout}
     >
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="home" component={Home} />
-          <Stack.Screen name="update" component={Update} />
-          <Stack.Screen name="profile" component={BottomTabNavigation} />
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false,
+            ...TransitionPresets.SlideFromRightIOS,
+          }}
+        >
+          <Stack.Screen name={ROUTES.home} component={Home} />
+          <Stack.Screen name={ROUTES.update} component={Update} />
+          <Stack.Screen name={ROUTES.profile} component={BottomTabNavigation} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

@@ -3,7 +3,7 @@ import { COLORS } from "../constants/colors";
 import { ROUTES } from "../constants/routes";
 import Profile from "../screens/Profile";
 import { TABICONSIZE } from "../constants/layout";
-import HomeTabIcon from "../icons/SearchTabIcon";
+import HomeTabIcon from "../icons/HomeTabIcon";
 import TrophyTabIcon from "../icons/TrophyTabIcon";
 import SearchTabIcon from "../icons/SearchTabIcon";
 import LeagueTabIcon from "../icons/LeagueTabIcon";
@@ -14,7 +14,6 @@ const Tab = createBottomTabNavigator();
 function BottomTabNavigation() {
   return (
     <Tab.Navigator
-      detachInactiveScreens
       initialRouteName={ROUTES.profile}
       screenOptions={({ route }) => ({
         tabBarActiveTintColor: COLORS.primaryButton,
@@ -22,6 +21,7 @@ function BottomTabNavigation() {
         tabBarStyle: {
           backgroundColor: COLORS.whiteText,
         },
+        tabBarLabelStyle: { marginBottom: 4 },
         headerShown: false,
       })}
     >

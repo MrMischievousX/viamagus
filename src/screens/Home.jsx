@@ -1,6 +1,5 @@
 import {
   ImageBackground,
-  SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -17,6 +16,8 @@ import {
   UserIcon,
 } from "../svgs";
 import { BannerBg } from "../images";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { ROUTES } from "../constants/routes";
 
 export default function Home({ navigation }) {
   return (
@@ -77,7 +78,7 @@ export default function Home({ navigation }) {
           <TouchableOpacity
             activeOpacity={0.5}
             onPress={() => {
-              navigation.navigate("update");
+              navigation.navigate(ROUTES.update);
             }}
             style={[
               styles.buttonView,
@@ -92,7 +93,7 @@ export default function Home({ navigation }) {
           <TouchableOpacity
             activeOpacity={0.5}
             onPress={() => {
-              navigation.navigate("update");
+              navigation.navigate(ROUTES.update);
             }}
             style={[
               styles.buttonView,

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text } from "react-native";
+import { View, Text, Platform } from "react-native";
 
 import Picker from "@uynguyen505/react-native-wheel-picker";
 import { WIDTH } from "../constants/layout";
@@ -21,28 +21,30 @@ const WheelPicker = () => {
         alignItems: "center",
       }}
     >
-      <Picker
-        selectedTextColor={COLORS.primaryText} // Work for Android
-        lineColor="#000000" //to set top and bottom line color (Without gradients)
-        lineGradientColorFrom="#008000" //to set top and bottom starting gradient line color
-        lineGradientColorTo="#FF5733" //to set top and bottom ending gradient
-        selectedValue={selectedItem}
-        itemStyle={{
-          color: COLORS.primaryText,
-          fontSize: 26,
-        }}
-        onValueChange={(index) => setSelectedItem(index)}
-        style={{ width: "100%" }}
-      >
-        {wheelData.map((value, i) => (
-          <PickerItem
-            label={value}
-            value={i}
-            key={i}
-            color={COLORS.primaryText}
-          />
-        ))}
-      </Picker>
+      {Platform.OS == "ios" && (
+        <Picker
+          selectedTextColor={COLORS.primaryText} // Work for Android
+          lineColor="#000000" //to set top and bottom line color (Without gradients)
+          lineGradientColorFrom="#008000" //to set top and bottom starting gradient line color
+          lineGradientColorTo="#FF5733" //to set top and bottom ending gradient
+          selectedValue={selectedItem}
+          itemStyle={{
+            color: COLORS.primaryText,
+            fontSize: 26,
+          }}
+          onValueChange={(index) => setSelectedItem(index)}
+          style={{ width: "100%" }}
+        >
+          {wheelData.map((value, i) => (
+            <PickerItem
+              label={value}
+              value={i}
+              key={i}
+              color={COLORS.primaryText}
+            />
+          ))}
+        </Picker>
+      )}
     </View>
   );
 };
