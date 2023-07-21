@@ -8,7 +8,7 @@
 ## :camera_flash: Demo
 
 <div align="center" style="margin:auto;width:100%;display:flex;justify-content:center;align-items:center;">
-<img width="250px" margin="30px" style="margin:20px;" src="./readme/recording.gif">
+<video width="250px" margin="30px" style="margin:20px;" src="./readme/viamagus-demo.mp4"></video>
 </div>
 
 ## :camera_flash: Screenshots
