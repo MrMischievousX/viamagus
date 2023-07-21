@@ -17,8 +17,8 @@
 <img width="250px" margin="30px" style="margin:20px;" src="./readme/today.png">
 <img width="250px" margin="30px" style="margin:20px;" src="./readme/home.png">
 <img width="250px" margin="30px" style="margin:20px;" src="./readme/sheet.png">
-<img width="250px" margin="30px" style="margin:20px;" src="./readme/profile.png">
-<img width="250px" margin="30px" style="margin:20px;" src="./readme/games.png">
+<img width="250px" margin="30px" style="margin:20px;" src="./readme/profiles.png">
+<img width="250px" margin="30px" style="margin:20px;" src="./readme/game.png">
 </div>
 
 <br>
